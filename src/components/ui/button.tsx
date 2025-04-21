@@ -43,7 +43,7 @@ const buttonVariants = cva(
       },
       size: {
         sm: "h-[34px] min-w-[98px] px-4 py-2 has-[>svg]:gap-x-1.5",
-        md: "h-12     min-w-48     px-8 py-3 has-[>svg]:gap-x-2 has-[>svg]:min-w-12",
+        md: "h-12     min-w-48     px-8 py-3 has-[>svg]:gap-x-2",
       },
     },
     defaultVariants: {
