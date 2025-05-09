@@ -56,53 +56,15 @@ export const TertiarySmall: Story = {
   },
 };
 
-
-export const PrimaryTextAndIcon: Story = {
-  args: {
-    children: (
-      <>
-        Click me
-        <ExampleIcon />
-      </>
-    ),
-    size: "md",
-  },
-  render: (args) => <Button {...args} />,
-};
-
-export const PrimarySmallTextAndIcon: Story = {
-  args: {
-    children: (
-      <>
-        Click me
-        <ExampleIcon />
-      </>
-    ),
-    size: "sm",
-  },
-  render: (args) => <Button {...args} />,
-};
-
-export const PrimaryJustIcon: Story = {
+export const PrimaryIcon: Story = {
   args: {
     children: (
       <>
         <ExampleIcon />
       </>
     ),
-    size: "md",
-  },
-  render: (args) => <Button {...args} />,
-};
-
-export const PrimarySmallJustIcon: Story = {
-  args: {
-    children: (
-      <>
-        <ExampleIcon />
-      </>
-    ),
-    size: "sm",
+    size: "icon",
+    variant: "secondary"
   },
   render: (args) => <Button {...args} />,
 };

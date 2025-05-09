@@ -35,7 +35,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-red-600     rounded-md text-primary-foreground shadow-xs hover:bg-red-500 active:bg-red-700",
+          "bg-red-600     rounded-md text-white shadow-xs hover:bg-red-500 active:bg-red-700",
         secondary:
           "bg-transparent rounded-md border-2 border-red-600 text-red-600  hover:border-red-500 active:border-red-700 hover:text-red-500 active:text-red-700",
         tertiary:
@@ -44,6 +44,7 @@ const buttonVariants = cva(
       size: {
         sm: "h-[34px] min-w-[98px] px-4 py-2 has-[>svg]:gap-x-1.5",
         md: "h-12     min-w-48     px-8 py-3 has-[>svg]:gap-x-2",
+        icon: "size-[34px] md:size-12"
       },
     },
     defaultVariants: {
