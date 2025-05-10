@@ -13,7 +13,13 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
-    children: "Click me",
+    className:"text-white",
+    children: (
+      <>
+        <ExampleIcon />
+        Atlántida
+      </>
+    ),
     variant: "primary",
   },
 };
@@ -56,15 +62,28 @@ export const TertiarySmall: Story = {
   },
 };
 
-export const PrimaryIcon: Story = {
+export const PrimaryIconMedium: Story = {
   args: {
     children: (
       <>
         <ExampleIcon />
       </>
     ),
-    size: "icon",
-    variant: "secondary"
+    size: "iconMd",
+    variant: "secondary",
+  },
+  render: (args) => <Button {...args} />,
+};
+
+export const PrimaryIconSmall: Story = {
+  args: {
+    children: (
+      <>
+        <ExampleIcon />
+      </>
+    ),
+    size: "iconSm",
+    variant: "secondary",
   },
   render: (args) => <Button {...args} />,
 };

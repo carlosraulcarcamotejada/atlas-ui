@@ -6,22 +6,21 @@ import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
   `
-  font-medium 
-  gap-2
+  font-regular
   inline-flex 
   items-center 
   justify-center
   shrink-0 
-  text-sm
   transition-all 
-  whitespace-nowrap 
+  whitespace-nowrap
   
-  [&_svg:not([class*='size-'])]:size-4
+
+  [&_svg:not([class*='size-'])]:size-04
   [&_svg]:pointer-events-none 
   [&_svg]:shrink-0 outline-none
 
   aria-invalid:border-destructive
-  aria-invalid:ring-destructive/20 
+  aria-invalid:ring-destructive/20
   dark:aria-invalid:ring-destructive/40
 
   disabled:opacity-50 
@@ -35,16 +34,17 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-red-600     rounded-md text-white shadow-xs hover:bg-red-500 active:bg-red-700",
+          "bg-red-600     rounded-02 text-white hover:bg-red-500 active:bg-red-700",
         secondary:
-          "bg-transparent rounded-md border-2 border-red-600 text-red-600  hover:border-red-500 active:border-red-700 hover:text-red-500 active:text-red-700",
+          "bg-transparent rounded-02 border-2 border-red-600 text-red-600  hover:border-red-500 active:border-red-700 hover:text-red-500 active:text-red-700",
         tertiary:
-          "bg-transparent rounded-md text-red-600  hover:text-red-500 active:text-red-700",
+          "bg-transparent rounded-02 text-red-600  hover:text-red-500 active:text-red-700",
       },
       size: {
-        sm: "h-[34px] min-w-[98px] px-4 py-2 has-[>svg]:gap-x-1.5",
-        md: "h-12     min-w-48     px-8 py-3 has-[>svg]:gap-x-2",
-        icon: "size-[34px] md:size-12"
+        sm: "h-06  min-w-[76px] px-04 py-02 gap-x-01 text-02",
+        md: "h-08 min-w-[192px] px-06 py-03 gap-x-02 text-03",
+        iconSm: "h-06 min-w-06 p-02  gap-x-01 text-02",
+        iconMd: "h-8 min-w-08 p-04   gap-x-02 text-03",
       },
     },
     defaultVariants: {
