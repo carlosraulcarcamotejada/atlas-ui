@@ -12,10 +12,6 @@ type Story = StoryObj<typeof Text>;
 
 export const Primary: Story = {
   args: {
-    as: "button",
-    underline: true,
-    italic: true,
-    emphasis: "low",
     children: "Atlántida",
   },
 };

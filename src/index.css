@@ -111,12 +111,12 @@
   }
 }
 
-/* Display-l / Regular */
+/* Grids */
 @layer components {
-  .display-l {
-    font-size: var(--text-09);
-    font-weight: var(--font-weight-regular);
-    /* letter-spacing: -0.03em; */
-    /* line-height: auto; */
+  .desktop-grid {
+  }
+  .tablet-grid {
+  }
+  .mobile-grid {
   }
 }
