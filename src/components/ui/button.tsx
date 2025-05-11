@@ -34,17 +34,17 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-red-600     rounded-02 text-white hover:bg-red-500 active:bg-red-700",
+          "bg-red-600     rounded-02 text-white  hover:bg-red-500     active:bg-red-700",
         secondary:
-          "bg-transparent rounded-02 border-2 border-red-600 text-red-600  hover:border-red-500 active:border-red-700 hover:text-red-500 active:text-red-700",
+          "bg-transparent rounded-02 text-primary hover:text-red-500 active:text-red-700  border-2 border-red-600 hover:border-red-500 active:border-red-700",
         tertiary:
-          "bg-transparent rounded-02 text-red-600  hover:text-red-500 active:text-red-700",
+          "bg-transparent rounded-02 text-primary  hover:text-red-500 active:text-red-700",
       },
       size: {
-        sm: "h-06  min-w-[76px] px-04 py-02 gap-x-01 text-02",
-        md: "h-08 min-w-[192px] px-06 py-03 gap-x-02 text-03",
-        iconSm: "h-06 min-w-06 p-02  gap-x-01 text-02",
-        iconMd: "h-8 min-w-08 p-04   gap-x-02 text-03",
+        sm: "h-06  min-w-[76px] px-04 py-02 gap-x-01 !text-02",
+        md: "h-08 min-w-[192px] px-06 py-03 gap-x-02 !text-03",
+        iconSm: "h-06 min-w-06 p-02  gap-x-01 !text-02",
+        iconMd: "h-8 min-w-08 p-04   gap-x-02 !text-03",
       },
     },
     defaultVariants: {

@@ -13,7 +13,6 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
-    className:"text-white",
     children: (
       <>
         <ExampleIcon />

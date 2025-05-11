@@ -1,5 +1,5 @@
 const Text = () => {
-  return <div className="font-re"></div>;
+  return <div className=""></div>;
 };
 
 export default Text;
