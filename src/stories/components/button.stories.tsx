@@ -86,3 +86,32 @@ export const PrimaryIconSmall: Story = {
   },
   render: (args) => <Button {...args} />,
 };
+
+export const PrimaryDisabled: Story = {
+  args: {
+    disabled: true,
+    children: (
+      <>
+        <ExampleIcon />
+        Atlántida
+      </>
+    ),
+    variant: "primary",
+  },
+};
+
+export const SecondaryDisabled: Story = {
+  args: {
+    disabled: true,
+    children: "Click me",
+    variant: "secondary",
+  },
+};
+
+export const TertiaryDisabled: Story = {
+  args: {
+    disabled: true,
+    children: "Click me",
+    variant: "tertiary",
+  },
+};

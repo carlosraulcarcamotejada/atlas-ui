@@ -14,31 +14,28 @@ const buttonVariants = cva(
   transition-all 
   whitespace-nowrap
   
-
   [&_svg:not([class*='size-'])]:size-04
   [&_svg]:pointer-events-none 
   [&_svg]:shrink-0 outline-none
 
-  aria-invalid:border-destructive
-  aria-invalid:ring-destructive/20
-  dark:aria-invalid:ring-destructive/40
+  aria-invalid:border-red-600
+  aria-invalid:ring-red-600/20
 
-  disabled:opacity-50 
   disabled:pointer-events-none
 
-  focus-visible:border-ring 
+  focus-visible:border-gray-400 
   focus-visible:ring-[3px] 
-  focus-visible:ring-ring/80
+  focus-visible:ring-gray-400
   `,
   {
     variants: {
       variant: {
         primary:
-          "bg-red-600     rounded-02 text-white  hover:bg-red-500     active:bg-red-700",
+          "bg-red-600     rounded-02 text-white  hover:bg-red-500     active:bg-red-700 disabled:bg-gray-200 disabled:text-gray-500",
         secondary:
-          "bg-transparent rounded-02 text-primary hover:text-red-500 active:text-red-700  border-2 border-red-600 hover:border-red-500 active:border-red-700",
+          "bg-transparent rounded-02 text-primary hover:text-red-500 active:text-red-700  border-2 border-red-600 hover:border-red-500 active:border-red-700 disabled:border-gray-500 disabled:text-gray-500",
         tertiary:
-          "bg-transparent rounded-02 text-primary  hover:text-red-500 active:text-red-700",
+          "bg-transparent rounded-02 text-primary  hover:text-red-500 active:text-red-700 disabled:text-gray-500",
       },
       size: {
         sm: "h-06  min-w-[76px] px-04 py-02 gap-x-01 !text-02",
@@ -54,16 +51,16 @@ const buttonVariants = cva(
   }
 );
 
-function Button({
-  className,
-  variant,
-  size,
+const Button = ({
   asChild = false,
+  className,
+  size,
+  variant,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
-  }) {
+  }) => {
   const Comp = asChild ? Slot : "button";
 
   return (
@@ -73,6 +70,8 @@ function Button({
       {...props}
     />
   );
-}
+};
+
+Button.displayName = "Button";
 
 export { Button, buttonVariants };

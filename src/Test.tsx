@@ -1,5 +1,5 @@
-const Text = () => {
-  return <div className=""></div>;
+const Test = () => {
+  return <div className="text- font-semibold leading-auto  -tracking-3"></div>;
 };
 
-export default Text;
+export default Test;
