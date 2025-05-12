@@ -54,7 +54,7 @@ const textVariants = cva("w-full", {
 
 type TextType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "div";
 
-const Text = ({
+function Text({
   as = "h1",
   asChild = false,
   className,
@@ -67,7 +67,7 @@ const Text = ({
 }: React.ComponentProps<TextType> &
   VariantProps<typeof textVariants> & {
     asChild?: boolean;
-  } & { as?: TextType }) => {
+  } & { as?: TextType }) {
   const Comp = asChild ? Slot : as;
 
   return (
@@ -79,8 +79,8 @@ const Text = ({
       {...props}
     />
   );
-};
+}
 
 Text.displayName = "Text";
 
-export { Text, textVariants };
+export { Text };

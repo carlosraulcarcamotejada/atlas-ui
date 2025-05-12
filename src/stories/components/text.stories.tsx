@@ -11,7 +11,10 @@ export default meta;
 type Story = StoryObj<typeof Text>;
 
 export const Primary: Story = {
-  args: {
+  args:
+  {
+    variant:"display-l",
+    as:"p",
     children: "Atlántida",
   },
 };

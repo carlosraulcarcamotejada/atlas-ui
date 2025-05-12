@@ -1,6 +1,6 @@
 import { IconSVGProps } from "@/interfaces/components/icon/icon-svg-props";
 
-export const ExampleIcon = (props: IconSVGProps) => {
+const ExampleIcon = (props: IconSVGProps) => {
   return (
     <svg
       {...props}
@@ -25,3 +25,5 @@ export const ExampleIcon = (props: IconSVGProps) => {
     </svg>
   );
 };
+
+export { ExampleIcon };

@@ -14,7 +14,7 @@ const buttonVariants = cva(
   transition-all 
   whitespace-nowrap
   
-  [&_svg:not([class*='size-'])]:size-04
+  [&_svg]:size-04
   [&_svg]:pointer-events-none 
   [&_svg]:shrink-0 outline-none
 
@@ -40,8 +40,8 @@ const buttonVariants = cva(
       size: {
         sm: "h-06  min-w-[76px] px-04 py-02 gap-x-01 !text-02",
         md: "h-08 min-w-[192px] px-06 py-03 gap-x-02 !text-03",
-        iconSm: "h-06 min-w-06 p-02  gap-x-01 !text-02",
-        iconMd: "h-8 min-w-08 p-04   gap-x-02 !text-03",
+        "icon-sm": "h-06 min-w-06 p-01  gap-x-01 !text-02",
+        "icon-md": "h-8 min-w-08 p-04   gap-x-02 !text-03",
       },
     },
     defaultVariants: {
@@ -51,7 +51,7 @@ const buttonVariants = cva(
   }
 );
 
-const Button = ({
+function Button({
   asChild = false,
   className,
   size,
@@ -60,7 +60,7 @@ const Button = ({
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
-  }) => {
+  }) {
   const Comp = asChild ? Slot : "button";
 
   return (
@@ -70,7 +70,7 @@ const Button = ({
       {...props}
     />
   );
-};
+}
 
 Button.displayName = "Button";
 

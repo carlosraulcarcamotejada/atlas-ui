@@ -68,8 +68,8 @@ export const PrimaryIconMedium: Story = {
         <ExampleIcon />
       </>
     ),
-    size: "iconMd",
-    variant: "secondary",
+    size: "icon-md",
+    variant: "primary",
   },
   render: (args) => <Button {...args} />,
 };
@@ -81,8 +81,8 @@ export const PrimaryIconSmall: Story = {
         <ExampleIcon />
       </>
     ),
-    size: "iconSm",
-    variant: "secondary",
+    size: "icon-sm",
+    variant: "primary",
   },
   render: (args) => <Button {...args} />,
 };
