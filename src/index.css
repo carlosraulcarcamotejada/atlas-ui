@@ -65,7 +65,7 @@
   --spacing-11: 6rem; /* 96px */
   /* Shadows */
   --shadow-01: 0px 1px 11px 0px rgba(0, 0, 0, 0.09);
-  --shadow-02: 0px 5px 8px 0px rgba(0, 0, 0, 0.012);
+  --shadow-02: 0px 5px 8px 0px rgba(0, 0, 0, 0.12);
   --shadow-error: 0px 16px 7px 0px rgba(255, 104, 110, 1);
   --shadow-success: 0px 0px 10px 0px rgba(141, 212, 193, 1);
   /* Radius */

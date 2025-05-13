@@ -13,14 +13,13 @@ type Story = StoryObj<typeof Alert>;
 
 export const WaringMD: Story = {
   render: () => (
-    <Alert variant="success" size="md" isOpen>
+    <Alert variant="error" size="sm" isOpen>
       <Alert.Icon>
         <ExampleIcon />
       </Alert.Icon>
-   
-        <Alert.Title>Error</Alert.Title>
-        <Alert.Description>Algo salió mal. Intenta de nuevo.</Alert.Description>
 
+      <Alert.Title>Error</Alert.Title>
+      <Alert.Description>Algo salió mal. Intenta de nuevo.</Alert.Description>
     </Alert>
   ),
 };

@@ -72,7 +72,7 @@ function Text({
 
   return (
     <Comp
-      data-slot={as}
+      data-slot="text"
       className={cn(
         textVariants({ className, color, italic, underline, variant, weight })
       )}
@@ -80,7 +80,5 @@ function Text({
     />
   );
 }
-
-Text.displayName = "Text";
 
 export { Text, textVariants };

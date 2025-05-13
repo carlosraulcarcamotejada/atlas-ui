@@ -47,6 +47,7 @@ function AlertRoot({
   const [open, setOpen] = React.useState(isOpen);
 
   const handleOnClose = () => setOpen(false);
+
   if (!open) return null;
 
   return (
@@ -96,9 +97,11 @@ function AlertClose() {
 }
 
 // Compound exports
-export const Alert = Object.assign(AlertRoot, {
+const Alert = Object.assign(AlertRoot, {
   Icon: AlertIcon,
   Title: AlertTitle,
   Description: AlertDescription,
   Close: AlertClose,
 });
+
+export { Alert };
