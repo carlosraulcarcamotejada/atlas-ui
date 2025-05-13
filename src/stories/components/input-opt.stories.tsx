@@ -16,7 +16,7 @@ type Story = StoryObj<typeof InputOTP>;
 
 export const InputOpt: Story = {
   render: () => (
-    <InputOTP disabled={false} maxLength={6}>
+    <InputOTP disabled={false} maxLength={5}>
       <InputOTPGroup>
         <InputOTPSlot index={0} />
         <InputOTPSlot index={1} />
@@ -30,7 +30,7 @@ export const InputOpt: Story = {
 
 export const InputOptDisabled: Story = {
   render: () => (
-    <InputOTP disabled={true} maxLength={6}>
+    <InputOTP disabled={true} maxLength={5}>
       <InputOTPGroup>
         <InputOTPSlot index={0} />
         <InputOTPSlot index={1} />

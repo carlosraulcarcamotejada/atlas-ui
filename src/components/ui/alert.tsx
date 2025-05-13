@@ -1,33 +1,19 @@
 import * as React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
-
 import { cn } from "@/lib/utils";
+import { cva, VariantProps } from "class-variance-authority";
 import { Button } from "@/components/ui/button";
 import { XIcon } from "@/components/icons/user-interface/x-icon";
 
+interface AlertContextValue {
+  onClose: () => void;
+}
+
+const AlertContext = React.createContext<AlertContextValue | undefined>(
+  undefined
+);
+
 const alertVariants = cva(
-  `
-  flex
-  font-regular
-  min-h-09
-  items-center
-  gap-x-02
-  relative
-  w-full
-
-
-
-  [&_svg]:size-05
-  [&_svg]:pointer-events-none
-  [&_svg]:shrink-0
-
-  [&_a]:underline
-  [&_a]:underline-offset-2
-  [&_a]:font-bold
-  [&_a]:hover:underline
-  [&_a]:hover:cursor-pointer
-
-  `,
+  "flex relative w-full font-regular min-h-09 items-center gap-x-02 [&_a]:underline [&_a]:underline-offset-2 [&_a]:font-bold [&_a]:hover:underline",
   {
     variants: {
       variant: {
@@ -47,45 +33,72 @@ const alertVariants = cva(
   }
 );
 
-function Alert({
+function AlertRoot({
   children,
   className,
   isOpen = false,
-  size = "md",
+  size,
   variant,
   ...props
 }: React.ComponentProps<"div"> &
-  VariantProps<typeof alertVariants> & { isOpen?: boolean }) {
-  const [open, setOpen] = React.useState<boolean>(isOpen);
+  VariantProps<typeof alertVariants> & {
+    isOpen?: boolean;
+  }) {
+  const [open, setOpen] = React.useState(isOpen);
 
-  const handleOnClose = () => {
-    setOpen(false);
-  };
-
-  if (!open) return <></>;
+  const handleOnClose = () => setOpen(false);
+  if (!open) return null;
 
   return (
-    <div
-      data-slot="alert"
-      role="alert"
-      className={cn(alertVariants({ size, variant }), className)}
-      {...props}
-    >
-      {children}
-      <Button
-        onClick={handleOnClose}
-        className={cn(
-          "text-current hover:text-current/80 active:text-current absolute top-1/2 -translate-y-1/2 right-03 cursor-pointer"
-        )}
-        variant="tertiary"
-        size="icon-sm"
+    <AlertContext.Provider value={{ onClose: handleOnClose }}>
+      <div
+        role="alert"
+        data-slot="alert"
+        className={cn(alertVariants({ size, variant }), className)}
+        {...props}
       >
-        <XIcon />
-      </Button>
-    </div>
+        {children}
+        <AlertClose />
+      </div>
+    </AlertContext.Provider>
   );
 }
 
-Alert.displayNane = "Alert";
+function AlertIcon({ children }: { children: React.ReactNode }) {
+  return <div className="[&_svg]:size-05 [&_svg]:shrink-0">{children}</div>;
+}
 
-export { Alert };
+function AlertTitle({ children }: { children: React.ReactNode }) {
+  return <strong className="font-bold">{children}</strong>;
+}
+
+function AlertDescription({ children }: { children: React.ReactNode }) {
+  return <span>{children}</span>;
+}
+
+function AlertClose() {
+  const context = React.useContext(AlertContext);
+  if (!context) {
+    throw new Error("AAlert.Close must be used within Alert");
+  }
+  const { onClose } = context;
+
+  return (
+    <Button
+      onClick={onClose}
+      className="text-current hover:text-current/80 active:text-current absolute top-1/2 -translate-y-1/2 right-03"
+      variant="tertiary"
+      size="icon-sm"
+    >
+      <XIcon />
+    </Button>
+  );
+}
+
+// Compound exports
+export const Alert = Object.assign(AlertRoot, {
+  Icon: AlertIcon,
+  Title: AlertTitle,
+  Description: AlertDescription,
+  Close: AlertClose,
+});

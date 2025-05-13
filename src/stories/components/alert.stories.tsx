@@ -13,60 +13,14 @@ type Story = StoryObj<typeof Alert>;
 
 export const WaringMD: Story = {
   render: () => (
-    <Alert isOpen={true}>
-      <ExampleIcon />
-      <span>You can add components to your app using the CLI.</span>
-      <a>Mas información</a>
-    </Alert>
-  ),
-};
+    <Alert variant="success" size="md" isOpen>
+      <Alert.Icon>
+        <ExampleIcon />
+      </Alert.Icon>
+   
+        <Alert.Title>Error</Alert.Title>
+        <Alert.Description>Algo salió mal. Intenta de nuevo.</Alert.Description>
 
-export const SuccessMD: Story = {
-  render: () => (
-    <Alert variant="success" isOpen={true}>
-      <ExampleIcon />
-      <span>You can add components to your app using the CLI.</span>
-      <a>Mas información</a>
-    </Alert>
-  ),
-};
-
-export const ErrorMD: Story = {
-  render: () => (
-    <Alert variant="error" isOpen={true}>
-      <ExampleIcon />
-      <span>You can add components to your app using the CLI.</span>
-      <a>Mas información</a>
-    </Alert>
-  ),
-};
-
-export const WaringSmall: Story = {
-  render: () => (
-    <Alert isOpen={true} size="sm">
-      <ExampleIcon />
-      <span>You can add components to your app using the CLI.</span>
-      <a>Mas información</a>
-    </Alert>
-  ),
-};
-
-export const SuccessSmall: Story = {
-  render: () => (
-    <Alert variant="success" isOpen={true} size="sm">
-      <ExampleIcon />
-      <span>You can add components to your app using the CLI.</span>
-      <a>Mas información</a>
-    </Alert>
-  ),
-};
-
-export const ErrorSmall: Story = {
-  render: () => (
-    <Alert variant="error" isOpen={true} size="sm">
-      <ExampleIcon />
-      <span>You can add components to your app using the CLI.</span>
-      <a>Mas información</a>
     </Alert>
   ),
 };
