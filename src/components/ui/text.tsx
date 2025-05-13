@@ -83,4 +83,4 @@ function Text({
 
 Text.displayName = "Text";
 
-export { Text };
+export { Text, textVariants };
