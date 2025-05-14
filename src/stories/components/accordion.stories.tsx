@@ -175,3 +175,43 @@ export const AccordionSmallWithoutDivider: Story = {
     </Accordion>
   ),
 };
+
+export const AccordionMediumMultiple: Story = {
+  render: () => (
+    <Accordion type="multiple" className="w-full">
+      <Accordion.Item value="item-1">
+        <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
+        <Accordion.Content>
+          Para activar el servicio de Atlántida Online deberás descargar nuestra
+          aplicación Atlántida Móvil y presionar el botón de "Activa tu Banca
+          Digital" para poder crear tu usuario y/o una nueva cuenta con los
+          accesos correspondientes. Al finalizar el proceso obtendrás tu usuario
+          y contraseña. Así mismo, también tienes al opción de solicitar los
+          accesos en cualquiera de nuestras agencias a nivel nacional.
+        </Accordion.Content>
+      </Accordion.Item>
+      <Accordion.Item value="item-2">
+        <Accordion.Trigger>Is it styled?</Accordion.Trigger>
+        <Accordion.Content>
+          Para activar el servicio de Atlántida Online deberás descargar nuestra
+          aplicación Atlántida Móvil y presionar el botón de "Activa tu Banca
+          Digital" para poder crear tu usuario y/o una nueva cuenta con los
+          accesos correspondientes. Al finalizar el proceso obtendrás tu usuario
+          y contraseña. Así mismo, también tienes al opción de solicitar los
+          accesos en cualquiera de nuestras agencias a nivel nacional.
+        </Accordion.Content>
+      </Accordion.Item>
+      <Accordion.Item value="item-3">
+        <Accordion.Trigger>Is it animated?</Accordion.Trigger>
+        <Accordion.Content>
+          Para activar el servicio de Atlántida Online deberás descargar nuestra
+          aplicación Atlántida Móvil y presionar el botón de "Activa tu Banca
+          Digital" para poder crear tu usuario y/o una nueva cuenta con los
+          accesos correspondientes. Al finalizar el proceso obtendrás tu usuario
+          y contraseña. Así mismo, también tienes al opción de solicitar los
+          accesos en cualquiera de nuestras agencias a nivel nacional.{" "}
+        </Accordion.Content>
+      </Accordion.Item>
+    </Accordion>
+  ),
+};

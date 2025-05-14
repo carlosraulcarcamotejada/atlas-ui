@@ -73,6 +73,7 @@ function Text({
   return (
     <Comp
       data-slot="text"
+      role="text"
       className={cn(
         textVariants({ className, color, italic, underline, variant, weight })
       )}

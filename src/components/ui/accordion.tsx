@@ -1,19 +1,9 @@
 "use client";
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { cva } from "class-variance-authority";
+import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { ChevronDownIcon } from "@/components/icons/arrows/chevron-down-icon";
-
-interface AccordionContext {
-  showDivider?: boolean;
-  size?: "sm" | "md";
-}
-
-const AccordionContext = React.createContext<AccordionContext>({
-  showDivider: true,
-  size: "md",
-});
 
 const accordionTriggerVariants = cva(
   `
@@ -24,15 +14,18 @@ const accordionTriggerVariants = cva(
   justify-start
   outline-none 
   pb-04
+  rounded-02
   text-gray-900
-  transition-all
+  transition
   w-full
 
+  active:bg-gray-200
   disabled:opacity-50
   disabled:pointer-events-none
   focus-visible:border-ring 
   focus-visible:ring-[3px] 
-  focus-visible:ring-ring/50 
+  focus-visible:ring-ring/50
+  hover:bg-gray-100
   hover:cursor-pointer
   [&_svg]:duration-200 
   [&_svg]:pointer-events-none 
@@ -41,6 +34,7 @@ const accordionTriggerVariants = cva(
   [&_svg]:text-red-600 
   [&_svg]:transition-transform
   [&[data-state=open]>svg]:rotate-x-180
+
 
   `,
   {
@@ -55,6 +49,18 @@ const accordionTriggerVariants = cva(
     },
   }
 );
+
+type AccordionSize = VariantProps<typeof accordionTriggerVariants>["size"];
+
+interface AccordionContext {
+  showDivider?: boolean;
+  size?: AccordionSize;
+}
+
+const AccordionContext = React.createContext<AccordionContext>({
+  showDivider: true,
+  size: "md",
+});
 
 const accordionItemVariants = cva("", {
   variants: {
