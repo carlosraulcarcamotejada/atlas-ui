@@ -13,8 +13,8 @@ type Story = StoryObj<typeof Text>;
 export const AvatarMediumDefault: Story = {
   render: () => (
     <Avatar>
-      <AvatarImage src="https://github.com/shadcn.png" />
-      <AvatarFallback>CN</AvatarFallback>
+      <AvatarImage src="https://yt3.ggpht.com/ytc/AIdro_kS_s6ERSLWmsZTqzs87cdd8p5qLaO-g78_VL_x7f0sPO8=s600-c-k-c0x00ffffff-no-rj-rp-mo" />
+      <AvatarFallback>CR</AvatarFallback>
     </Avatar>
   ),
 };
@@ -22,8 +22,8 @@ export const AvatarMediumDefault: Story = {
 export const AvatarSmallDefault: Story = {
   render: () => (
     <Avatar size="sm">
-      <AvatarImage src="https://github.com/shadcn.png" />
-      <AvatarFallback>CN</AvatarFallback>
+      <AvatarImage src="https://yt3.ggpht.com/ytc/AIdro_kS_s6ERSLWmsZTqzs87cdd8p5qLaO-g78_VL_x7f0sPO8=s600-c-k-c0x00ffffff-no-rj-rp-mo" />
+      <AvatarFallback>CR</AvatarFallback>
     </Avatar>
   ),
 };
@@ -31,8 +31,8 @@ export const AvatarSmallDefault: Story = {
 export const AvatarMediumOnline: Story = {
   render: () => (
     <Avatar status="online">
-      <AvatarImage src="https://github.com/shadcn.png" />
-      <AvatarFallback>CN</AvatarFallback>
+      <AvatarImage src="https://yt3.ggpht.com/ytc/AIdro_kS_s6ERSLWmsZTqzs87cdd8p5qLaO-g78_VL_x7f0sPO8=s600-c-k-c0x00ffffff-no-rj-rp-mo" />
+      <AvatarFallback>CR</AvatarFallback>
     </Avatar>
   ),
 };
@@ -40,8 +40,8 @@ export const AvatarMediumOnline: Story = {
 export const AvatarSmallonline: Story = {
   render: () => (
     <Avatar size="sm" status="online">
-      <AvatarImage src="https://github.com/shadcn.png" />
-      <AvatarFallback>CN</AvatarFallback>
+      <AvatarImage src="https://yt3.ggpht.com/ytc/AIdro_kS_s6ERSLWmsZTqzs87cdd8p5qLaO-g78_VL_x7f0sPO8=s600-c-k-c0x00ffffff-no-rj-rp-mo" />
+      <AvatarFallback>CR</AvatarFallback>
     </Avatar>
   ),
 };
@@ -50,7 +50,7 @@ export const AvatarMediumDefaultWithoutPhoto: Story = {
   render: () => (
     <Avatar>
       <AvatarImage src="https://github.com/shadcn.pngss" />
-      <AvatarFallback>CN</AvatarFallback>
+      <AvatarFallback>CR</AvatarFallback>
     </Avatar>
   ),
 };
@@ -59,7 +59,7 @@ export const AvatarSmallDefaultWithoutPhoto: Story = {
   render: () => (
     <Avatar size="sm">
       <AvatarImage src="https://github.com/shadcn.pngss" />
-      <AvatarFallback>CN</AvatarFallback>
+      <AvatarFallback>CR</AvatarFallback>
     </Avatar>
   ),
 };
@@ -68,7 +68,7 @@ export const AvatarMediumDefaultWithoutPhotoOnline: Story = {
   render: () => (
     <Avatar status="online">
       <AvatarImage src="https://github.com/shadcn.pngss" />
-      <AvatarFallback>CN</AvatarFallback>
+      <AvatarFallback>CR</AvatarFallback>
     </Avatar>
   ),
 };
@@ -77,7 +77,7 @@ export const AvatarSmallDefaultWithoutPhotoOnline: Story = {
   render: () => (
     <Avatar size="sm" status="online">
       <AvatarImage src="https://github.com/shadcn.pngss" />
-      <AvatarFallback>CN</AvatarFallback>
+      <AvatarFallback>CR</AvatarFallback>
     </Avatar>
   ),
 };

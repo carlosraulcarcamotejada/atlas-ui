@@ -19,18 +19,22 @@ function AppNavigation({
   return (
     <NavigationContext.Provider value={{ activePath }}>
       <nav
-        {...props}
         className="
-        bg-white
-        flex
-        pb-03 
-        pt-02 
-        rounded-t-02 
-        shadow-01
-        w-full 
-        "
+                bg-white
+                bottom-0
+                fixed
+                flex
+                left-0
+                pb-03 
+                pt-02 
+                rounded-t-02 
+                shadow-01
+                w-full
+                z-50
+                "
         data-slot="app-navigation"
         role="app-navigation"
+        {...props}
       >
         {children}
       </nav>

@@ -80,7 +80,7 @@ function AlertDescription({ children }: { children: React.ReactNode }) {
 function AlertClose() {
   const context = React.useContext(AlertContext);
   if (!context) {
-    throw new Error("AAlert.Close must be used within Alert");
+    throw new Error("Alert.Close must be used within Alert");
   }
   const { onClose } = context;
 
