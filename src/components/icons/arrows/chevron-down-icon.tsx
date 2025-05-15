@@ -1,28 +1,26 @@
-import { IconSVGProps } from "@/interfaces/components/icon/icon-svg-props";
+import * as React from "react";
 
-const ChevronDownIcon = (props: IconSVGProps) => {
+function ChevronDownIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      {...props}
-      width="24"
-      height="24"
-      xmlns="http://www.w3.org/2000/svg"
       fill="none"
-      viewBox="0 0 24 24"
+      viewBox="0 -2 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_51_1032)">
         <path
+          d="M12.0013 15.0027C11.8005 15.0027 11.5997 14.9117 11.4475 14.7366L5.2282 7.53722C4.92393 7.18706 4.92393 6.61279 5.2282 6.26262C5.53248 5.91246 6.0254 5.91246 6.33576 6.26262L12.0013 12.8247L17.6669 6.35367C17.9711 6.0035 18.4701 6.0035 18.7744 6.36067C19.0787 6.71083 19.0787 7.2851 18.7744 7.63527L12.5612 14.7436C12.409 14.9187 12.2082 15.0027 12.0074 15.0027H12.0013Z"
           fill="currentColor"
-          d="M12.001 15.003a.74.74 0 0 1-.553-.266l-6.22-7.2a1.004 1.004 0 0 1 0-1.274c.304-.35.797-.35 1.108 0L12 12.825l5.666-6.471a.71.71 0 0 1 1.107.007c.305.35.305.924 0 1.274l-6.213 7.109a.73.73 0 0 1-.554.259z"
-        ></path>
+        />
       </g>
       <defs>
         <clipPath id="clip0_51_1032">
-          <path fill="currentColor" d="M6 8h12v7H6z"></path>
+          <rect width="12" height="7" fill="white" transform="translate(6 8)" />
         </clipPath>
       </defs>
     </svg>
   );
-};
+}
 
 export { ChevronDownIcon };
