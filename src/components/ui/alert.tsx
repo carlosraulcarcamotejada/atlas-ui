@@ -2,7 +2,8 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { Button } from "@/components/ui/button";
-import { XIcon } from "@/components/icons/user-interface/x-icon";
+import { XIcon } from "../icons/user-interface/x-icon";
+// import { XIcon } from "@/components/icons/user-interface/x-icon";
 
 interface AlertContextValue {
   onClose: () => void;

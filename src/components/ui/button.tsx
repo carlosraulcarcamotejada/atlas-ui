@@ -32,9 +32,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-red-600     rounded-02 text-white  hover:bg-red-500     active:bg-red-700 disabled:bg-gray-200 disabled:text-gray-500",
+          "bg-primary rounded-02 text-white  hover:bg-red-500     active:bg-red-700 disabled:bg-gray-200 disabled:text-gray-500",
         secondary:
-          "bg-transparent rounded-02 text-primary hover:text-red-500 active:text-red-700  border-2 border-red-600 hover:border-red-500 active:border-red-700 disabled:border-gray-500 disabled:text-gray-500",
+          "bg-transparent rounded-02 text-primary hover:text-red-500 active:text-red-700  border-2 border-primary hover:border-red-500 active:border-red-700 disabled:border-gray-500 disabled:text-gray-500",
         tertiary:
           "bg-transparent rounded-02 text-primary  hover:text-red-500 active:text-red-700 disabled:text-gray-500",
       },

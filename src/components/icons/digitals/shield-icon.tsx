@@ -1,7 +1,6 @@
-import { JSX } from "react";
-import { IconProps } from "../type/IconProps";
+import * as React from "react";
 
-const ShieldIcon = (props: IconProps): JSX.Element => {
+function ShieldIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -24,6 +23,6 @@ const ShieldIcon = (props: IconProps): JSX.Element => {
       </defs>
     </svg>
   );
-};
+}
 
 export { ShieldIcon };
