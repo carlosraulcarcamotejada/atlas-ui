@@ -105,6 +105,11 @@
   --leading-10: 2.5rem; /* 40px */
   --leading-auto: auto; /* auto */
 
+  /* Breakpoints */
+  --breakpoint-sm: 30rem;
+  --breakpoint-md: 51rem;
+  --breakpoint-lg: 79.5rem;
+
   /* Keyframes */
   /* Caret blink */
   --animate-caret-blink: caret-blink 1.25s ease-out infinite;

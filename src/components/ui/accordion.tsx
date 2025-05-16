@@ -31,7 +31,7 @@ const accordionTriggerVariants = cva(
   [&_svg]:pointer-events-none 
   [&_svg]:shrink-0 
   [&_svg]:size-05 
-  [&_svg]:text-red-600 
+  [&_svg]:text-primary
   [&_svg]:transition-transform
   [&[data-state=open]>svg]:rotate-x-180
 
