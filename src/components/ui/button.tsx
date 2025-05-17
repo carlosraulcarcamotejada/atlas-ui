@@ -43,6 +43,8 @@ const buttonVariants = cva(
         md: "h-08 min-w-[192px] px-06 py-03 gap-x-02 !text-03",
         "icon-sm": "h-06 min-w-06 p-01  gap-x-01 !text-02",
         "icon-md": "h-8 min-w-08 p-04   gap-x-02 !text-03",
+        "fab-sm": "size-06 rounded-full grid place-content-center",
+        "fab-md": "size-07 rounded-full grid place-content-center",
       },
     },
     defaultVariants: {
@@ -69,7 +71,7 @@ function Button({
       data-slot="button"
       data-variant={variant}
       data-size={size}
-      className={cn(buttonVariants({ className, size, variant }))}
+      className={cn("", buttonVariants({ className, size, variant }))}
       {...props}
     />
   );

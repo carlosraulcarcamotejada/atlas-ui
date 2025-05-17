@@ -12,22 +12,16 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
-  args: {
-    children: (
-      <>
-        <ExampleIcon />
-        Atlántida
-      </>
-    ),
-    variant: "primary",
-  },
+  render: () => (
+    <Button variant="primary">
+      <ExampleIcon />
+      Atlántida
+    </Button>
+  ),
 };
 
 export const Secondary: Story = {
-  args: {
-    children: "Click me",
-    variant: "secondary",
-  },
+  render: () => <Button variant="secondary">Click me</Button>,
 };
 
 export const Tertiary: Story = {
@@ -38,11 +32,11 @@ export const Tertiary: Story = {
 };
 
 export const PrimarySmall: Story = {
-  args: {
-    children: "Click me",
-    variant: "primary",
-    size: "sm",
-  },
+  render: () => (
+    <Button variant="primary" size="sm">
+      Click me
+    </Button>
+  ),
 };
 
 export const SecondarySmall: Story = {
@@ -74,6 +68,32 @@ export const PrimaryIconMedium: Story = {
   render: (args) => <Button {...args} />,
 };
 
+export const SecondaryIconMedium: Story = {
+  args: {
+    children: (
+      <>
+        <ExampleIcon />
+      </>
+    ),
+    size: "icon-md",
+    variant: "secondary",
+  },
+  render: (args) => <Button {...args} />,
+};
+
+export const TertiaryIconMedium: Story = {
+  args: {
+    children: (
+      <>
+        <ExampleIcon />
+      </>
+    ),
+    size: "icon-md",
+    variant: "tertiary",
+  },
+  render: (args) => <Button {...args} />,
+};
+
 export const PrimaryIconSmall: Story = {
   args: {
     children: (
@@ -83,6 +103,32 @@ export const PrimaryIconSmall: Story = {
     ),
     size: "icon-sm",
     variant: "primary",
+  },
+  render: (args) => <Button {...args} />,
+};
+
+export const SecondaryIconSmall: Story = {
+  args: {
+    children: (
+      <>
+        <ExampleIcon />
+      </>
+    ),
+    size: "icon-sm",
+    variant: "secondary",
+  },
+  render: (args) => <Button {...args} />,
+};
+
+export const TertiaryIconSmall: Story = {
+  args: {
+    children: (
+      <>
+        <ExampleIcon />
+      </>
+    ),
+    size: "icon-sm",
+    variant: "tertiary",
   },
   render: (args) => <Button {...args} />,
 };
@@ -114,4 +160,52 @@ export const TertiaryDisabled: Story = {
     children: "Click me",
     variant: "tertiary",
   },
+};
+
+export const PrimaryFabMedium: Story = {
+  render: () => (
+    <Button variant="primary" size="fab-md">
+      <ExampleIcon />
+    </Button>
+  ),
+};
+
+export const SecondaryFabMedium: Story = {
+  render: () => (
+    <Button variant="secondary" size="fab-md">
+      <ExampleIcon />
+    </Button>
+  ),
+};
+
+export const TertiaryFabMedium: Story = {
+  render: () => (
+    <Button variant="tertiary" size="fab-md">
+      <ExampleIcon />
+    </Button>
+  ),
+};
+
+export const PrimaryFabSmall: Story = {
+  render: () => (
+    <Button variant="primary" size="fab-sm">
+      <ExampleIcon />
+    </Button>
+  ),
+};
+
+export const SecondaryFabSmall: Story = {
+  render: () => (
+    <Button variant="secondary" size="fab-sm">
+      <ExampleIcon />
+    </Button>
+  ),
+};
+
+export const TertiaryFabSmall: Story = {
+  render: () => (
+    <Button variant="tertiary" size="fab-sm">
+      <ExampleIcon />
+    </Button>
+  ),
 };

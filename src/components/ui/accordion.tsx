@@ -86,7 +86,7 @@ const accordionContentVariants = cva("pt-0 pb-04 text-gray-700 font-regular", {
   },
 });
 
-function AccordionRoot({
+function Accordion({
   className,
   showDivider,
   size,
@@ -172,10 +172,4 @@ function AccordionContent({
   );
 }
 
-const Accordion = Object.assign(AccordionRoot, {
-  Item: AccordionItem,
-  Trigger: AccordionTrigger,
-  Content: AccordionContent,
-});
-
-export { Accordion };
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };

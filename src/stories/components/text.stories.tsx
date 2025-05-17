@@ -11,11 +11,11 @@ export default meta;
 type Story = StoryObj<typeof Text>;
 
 export const Primary: Story = {
-  args: {
-    variant: "display-l",
-    as: "p",
-    children: "Atlántida",
-  },
+  render: () => (
+    <Text variant="display-l" weight="bold">
+      Atlántida
+    </Text>
+  )
 };
 
 export const TestingTextStyle: Story = {

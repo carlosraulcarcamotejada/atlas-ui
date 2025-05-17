@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { AppNavigation } from "@/components/ui/app-navigation";
+import {
+  AppNavigation,
+  AppNavigationItem,
+} from "@/components/ui/app-navigation";
 import { MagnifyingGlassIcon } from "@/components/icons/user-interface/magnifying-glass-icon";
 import { HomeIcon } from "@/components/icons/user-interface/home-icon";
 import { SettingsIcon } from "@/components/icons/user-interface/settings-icon";
@@ -16,13 +19,13 @@ type Story = StoryObj<typeof AppNavigation>;
 export const SelectedFirsOption: Story = {
   render: () => (
     <AppNavigation>
-      <AppNavigation.Item href="/" icon={<HomeIcon />} label="Inicio" />
-      <AppNavigation.Item
+      <AppNavigationItem href="/" icon={<HomeIcon />} label="Inicio" />
+      <AppNavigationItem
         href="/search"
         icon={<MagnifyingGlassIcon />}
         label="Buscar"
       />
-      <AppNavigation.Item
+      <AppNavigationItem
         href="/settings"
         icon={<SettingsIcon />}
         label="Setting"
@@ -34,13 +37,13 @@ export const SelectedFirsOption: Story = {
 export const SelectedSecondOption: Story = {
   render: () => (
     <AppNavigation activePath="/search">
-      <AppNavigation.Item href="/" icon={<HomeIcon />} label="Inicio" />
-      <AppNavigation.Item
+      <AppNavigationItem href="/" icon={<HomeIcon />} label="Inicio" />
+      <AppNavigationItem
         href="/search"
         icon={<MagnifyingGlassIcon />}
         label="Buscar"
       />
-      <AppNavigation.Item
+      <AppNavigationItem
         href="/settings"
         icon={<SettingsIcon />}
         label="Setting"
@@ -52,13 +55,13 @@ export const SelectedSecondOption: Story = {
 export const SelectedThirdOption: Story = {
   render: () => (
     <AppNavigation activePath="/settings">
-      <AppNavigation.Item href="/" icon={<HomeIcon />} label="Inicio" />
-      <AppNavigation.Item
+      <AppNavigationItem href="/" icon={<HomeIcon />} label="Inicio" />
+      <AppNavigationItem
         href="/search"
         icon={<MagnifyingGlassIcon />}
         label="Buscar"
       />
-      <AppNavigation.Item
+      <AppNavigationItem
         href="/settings"
         icon={<SettingsIcon />}
         label="Setting"

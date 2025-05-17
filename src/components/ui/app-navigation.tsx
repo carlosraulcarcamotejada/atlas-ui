@@ -50,7 +50,7 @@ interface AppNavigationItemProps {
   children?: React.ReactNode;
 }
 
-export function AppNavigationItem({
+function AppNavigationItem({
   asChild = false,
   className,
   href,
@@ -92,5 +92,4 @@ export function AppNavigationItem({
   );
 }
 
-AppNavigation.Item = AppNavigationItem;
-export { AppNavigation };
+export { AppNavigation, AppNavigationItem };

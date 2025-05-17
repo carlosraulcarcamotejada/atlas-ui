@@ -1,7 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Alert } from "@/components/ui/alert";
+import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
+} from "@/components/ui/alert";
 import { ExampleIcon } from "@/components/icons/example-icon";
-
 
 const meta: Meta<typeof Alert> = {
   title: "Components/Alert",
@@ -15,12 +19,12 @@ type Story = StoryObj<typeof Alert>;
 export const WaringMD: Story = {
   render: () => (
     <Alert variant="error" size="sm" isOpen>
-      <Alert.Icon>
+      <AlertIcon>
         <ExampleIcon />
-      </Alert.Icon>
+      </AlertIcon>
 
-      <Alert.Title>Error</Alert.Title>
-      <Alert.Description>Algo salió mal. Intenta de nuevo.</Alert.Description>
+      <AlertTitle>Error</AlertTitle>
+      <AlertDescription>Algo salió mal. Intenta de nuevo.</AlertDescription>
     </Alert>
   ),
 };

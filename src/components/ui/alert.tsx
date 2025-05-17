@@ -34,7 +34,7 @@ const alertVariants = cva(
   }
 );
 
-function AlertRoot({
+function Alert({
   children,
   className,
   isOpen = false,
@@ -97,12 +97,4 @@ function AlertClose() {
   );
 }
 
-// Compound exports
-const Alert = Object.assign(AlertRoot, {
-  Icon: AlertIcon,
-  Title: AlertTitle,
-  Description: AlertDescription,
-  Close: AlertClose,
-});
-
-export { Alert };
+export { Alert, AlertDescription, AlertIcon, AlertTitle };
