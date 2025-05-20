@@ -20,14 +20,14 @@ export const Primary: Story = {
   ),
 };
 
-export const Secondary: Story = {
-  render: () => <Button variant="secondary">Click me</Button>,
+export const Outline: Story = {
+  render: () => <Button variant="outline">Click me</Button>,
 };
 
-export const Tertiary: Story = {
+export const Ghost: Story = {
   args: {
     children: "Click me",
-    variant: "tertiary",
+    variant: "ghost",
   },
 };
 
@@ -39,18 +39,18 @@ export const PrimarySmall: Story = {
   ),
 };
 
-export const SecondarySmall: Story = {
+export const OutlineSmall: Story = {
   args: {
     children: "Click me",
-    variant: "secondary",
+    variant: "outline",
     size: "sm",
   },
 };
 
-export const TertiarySmall: Story = {
+export const GhostSmall: Story = {
   args: {
     children: "Click me",
-    variant: "tertiary",
+    variant: "ghost",
     size: "sm",
   },
 };
@@ -68,7 +68,7 @@ export const PrimaryIconMedium: Story = {
   render: (args) => <Button {...args} />,
 };
 
-export const SecondaryIconMedium: Story = {
+export const OutlineIconMedium: Story = {
   args: {
     children: (
       <>
@@ -76,12 +76,12 @@ export const SecondaryIconMedium: Story = {
       </>
     ),
     size: "icon-md",
-    variant: "secondary",
+    variant: "outline",
   },
   render: (args) => <Button {...args} />,
 };
 
-export const TertiaryIconMedium: Story = {
+export const GhostIconMedium: Story = {
   args: {
     children: (
       <>
@@ -89,7 +89,7 @@ export const TertiaryIconMedium: Story = {
       </>
     ),
     size: "icon-md",
-    variant: "tertiary",
+    variant: "ghost",
   },
   render: (args) => <Button {...args} />,
 };
@@ -107,7 +107,7 @@ export const PrimaryIconSmall: Story = {
   render: (args) => <Button {...args} />,
 };
 
-export const SecondaryIconSmall: Story = {
+export const OutlineIconSmall: Story = {
   args: {
     children: (
       <>
@@ -115,12 +115,12 @@ export const SecondaryIconSmall: Story = {
       </>
     ),
     size: "icon-sm",
-    variant: "secondary",
+    variant: "outline",
   },
   render: (args) => <Button {...args} />,
 };
 
-export const TertiaryIconSmall: Story = {
+export const GhostIconSmall: Story = {
   args: {
     children: (
       <>
@@ -128,9 +128,57 @@ export const TertiaryIconSmall: Story = {
       </>
     ),
     size: "icon-sm",
-    variant: "tertiary",
+    variant: "ghost",
   },
   render: (args) => <Button {...args} />,
+};
+
+export const PrimaryFabMedium: Story = {
+  render: () => (
+    <Button variant="primary" size="fab-md">
+      <ExampleIcon />
+    </Button>
+  ),
+};
+
+export const OutlineFabMedium: Story = {
+  render: () => (
+    <Button variant="outline" size="fab-md">
+      <ExampleIcon />
+    </Button>
+  ),
+};
+
+export const GhostFabMedium: Story = {
+  render: () => (
+    <Button variant="ghost" size="fab-md">
+      <ExampleIcon />
+    </Button>
+  ),
+};
+
+export const PrimaryFabSmall: Story = {
+  render: () => (
+    <Button variant="primary" size="fab-sm">
+      <ExampleIcon />
+    </Button>
+  ),
+};
+
+export const OutlineFabSmall: Story = {
+  render: () => (
+    <Button variant="outline" size="fab-sm">
+      <ExampleIcon />
+    </Button>
+  ),
+};
+
+export const GhostFabSmall: Story = {
+  render: () => (
+    <Button variant="ghost" size="fab-sm">
+      <ExampleIcon />
+    </Button>
+  ),
 };
 
 export const PrimaryDisabled: Story = {
@@ -146,66 +194,18 @@ export const PrimaryDisabled: Story = {
   },
 };
 
-export const SecondaryDisabled: Story = {
+export const OutlineDisabled: Story = {
   args: {
     disabled: true,
     children: "Click me",
-    variant: "secondary",
+    variant: "outline",
   },
 };
 
-export const TertiaryDisabled: Story = {
+export const GhostDisabled: Story = {
   args: {
     disabled: true,
     children: "Click me",
-    variant: "tertiary",
+    variant: "ghost",
   },
-};
-
-export const PrimaryFabMedium: Story = {
-  render: () => (
-    <Button variant="primary" size="fab-md">
-      <ExampleIcon />
-    </Button>
-  ),
-};
-
-export const SecondaryFabMedium: Story = {
-  render: () => (
-    <Button variant="secondary" size="fab-md">
-      <ExampleIcon />
-    </Button>
-  ),
-};
-
-export const TertiaryFabMedium: Story = {
-  render: () => (
-    <Button variant="tertiary" size="fab-md">
-      <ExampleIcon />
-    </Button>
-  ),
-};
-
-export const PrimaryFabSmall: Story = {
-  render: () => (
-    <Button variant="primary" size="fab-sm">
-      <ExampleIcon />
-    </Button>
-  ),
-};
-
-export const SecondaryFabSmall: Story = {
-  render: () => (
-    <Button variant="secondary" size="fab-sm">
-      <ExampleIcon />
-    </Button>
-  ),
-};
-
-export const TertiaryFabSmall: Story = {
-  render: () => (
-    <Button variant="tertiary" size="fab-sm">
-      <ExampleIcon />
-    </Button>
-  ),
 };

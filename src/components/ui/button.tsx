@@ -33,10 +33,10 @@ const buttonVariants = cva(
       variant: {
         primary:
           "bg-primary rounded-02 text-white  hover:bg-red-500     active:bg-red-700 disabled:bg-gray-200 disabled:text-gray-500",
-        secondary:
-          "bg-transparent rounded-02 text-primary hover:text-red-500 active:text-red-700  border-2 border-primary hover:border-red-500 active:border-red-700 disabled:border-gray-500 disabled:text-gray-500",
-        tertiary:
-          "bg-transparent rounded-02 text-primary  hover:text-red-500 active:text-red-700 disabled:text-gray-500",
+        outline:
+          "bg-white rounded-02 text-primary hover:text-red-500 active:text-red-700  border-2 border-primary hover:border-red-500 active:border-red-700 disabled:border-gray-500 disabled:text-gray-500",
+        ghost:
+          "bg-white rounded-02 text-primary  hover:text-red-500  hover:bg-gray-100 active:bg-gray-200 active:text-red-700 disabled:text-gray-500",
       },
       size: {
         sm: "h-06  min-w-[76px] px-04 py-02 gap-x-01 !text-02",
