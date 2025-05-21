@@ -33,6 +33,7 @@ const textVariants = cva("w-full", {
       "red-600": "!text-red-600",
       "red-500": "!text-red-500",
       white: "!text-white",
+      "primary": "text-primary",
     },
     weight: {
       regular: "font-regular",

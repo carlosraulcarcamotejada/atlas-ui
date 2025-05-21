@@ -7,7 +7,9 @@ function Test() {
         font-regular
         truncate
         pr-0
-        siz
+        shadow-none
+
+        
     `}
     >
       Atlas

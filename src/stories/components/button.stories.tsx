@@ -11,201 +11,350 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
+export const PrimaryMedium: Story = {
   render: () => (
-    <Button variant="primary">
+    <Button >
+      Atlántida
+      <ExampleIcon />
+    </Button>
+  ),
+};
+
+export const OutlineMedium: Story = {
+  render: () => (
+    <Button variant="outline">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
+};
+
+export const GhostMedium: Story = {
+  render: () => (
+    <Button variant="ghost">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
+};
+
+export const PrimaryMediumBlock: Story = {
+  render: () => (
+    <Button block>
       <ExampleIcon />
       Atlántida
     </Button>
   ),
 };
 
-export const Outline: Story = {
-  render: () => <Button variant="outline">Click me</Button>,
+export const OutlineMediumBlock: Story = {
+  render: () => (
+    <Button block variant="outline">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
 };
 
-export const Ghost: Story = {
-  args: {
-    children: "Click me",
-    variant: "ghost",
-  },
+export const GhostMediumBlock: Story = {
+  render: () => (
+    <Button block variant="ghost">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
 };
 
 export const PrimarySmall: Story = {
   render: () => (
-    <Button variant="primary" size="sm">
+    <Button size="sm">
+      <ExampleIcon />
       Click me
     </Button>
   ),
 };
 
 export const OutlineSmall: Story = {
-  args: {
-    children: "Click me",
-    variant: "outline",
-    size: "sm",
-  },
+  render: () => (
+    <Button variant="outline" size="sm">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
 };
 
 export const GhostSmall: Story = {
-  args: {
-    children: "Click me",
-    variant: "ghost",
-    size: "sm",
-  },
+  render: () => (
+    <Button variant="ghost" size="sm">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
+};
+
+export const PrimaryLarge: Story = {
+  render: () => (
+    <Button size="lg">
+      <ExampleIcon />
+      Atlántida
+    </Button>
+  ),
+};
+
+export const OutlineLarge: Story = {
+  render: () => (
+    <Button variant="outline" size="lg">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
+};
+
+export const GhostLarge: Story = {
+  render: () => (
+    <Button variant="ghost" size="lg">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
+};
+
+export const PrimarySmallBlock: Story = {
+  render: () => (
+    <Button block size="sm">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
+};
+
+export const OutlineSmallBlock: Story = {
+  render: () => (
+    <Button block variant="outline" size="sm">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
+};
+
+export const GhostSmallBlock: Story = {
+  render: () => (
+    <Button block variant="ghost" size="sm">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
 };
 
 export const PrimaryIconMedium: Story = {
-  args: {
-    children: (
-      <>
-        <ExampleIcon />
-      </>
-    ),
-    size: "icon-md",
-    variant: "primary",
-  },
-  render: (args) => <Button {...args} />,
+  render: () => (
+    <Button iconOnly size="md">
+      <ExampleIcon />
+    </Button>
+  ),
 };
 
 export const OutlineIconMedium: Story = {
-  args: {
-    children: (
-      <>
-        <ExampleIcon />
-      </>
-    ),
-    size: "icon-md",
-    variant: "outline",
-  },
-  render: (args) => <Button {...args} />,
+  render: () => (
+    <Button iconOnly size="md" variant="outline">
+      <ExampleIcon />
+    </Button>
+  ),
 };
 
 export const GhostIconMedium: Story = {
-  args: {
-    children: (
-      <>
-        <ExampleIcon />
-      </>
-    ),
-    size: "icon-md",
-    variant: "ghost",
-  },
-  render: (args) => <Button {...args} />,
+  render: () => (
+    <Button iconOnly size="md" variant="ghost">
+      <ExampleIcon />
+    </Button>
+  ),
 };
 
 export const PrimaryIconSmall: Story = {
-  args: {
-    children: (
-      <>
-        <ExampleIcon />
-      </>
-    ),
-    size: "icon-sm",
-    variant: "primary",
-  },
-  render: (args) => <Button {...args} />,
+  render: () => (
+    <Button iconOnly size="sm">
+      <ExampleIcon />
+    </Button>
+  ),
 };
 
 export const OutlineIconSmall: Story = {
-  args: {
-    children: (
-      <>
-        <ExampleIcon />
-      </>
-    ),
-    size: "icon-sm",
-    variant: "outline",
-  },
-  render: (args) => <Button {...args} />,
+  render: () => (
+    <Button iconOnly size="sm" variant="outline">
+      <ExampleIcon />
+    </Button>
+  ),
 };
 
 export const GhostIconSmall: Story = {
-  args: {
-    children: (
-      <>
-        <ExampleIcon />
-      </>
-    ),
-    size: "icon-sm",
-    variant: "ghost",
-  },
-  render: (args) => <Button {...args} />,
-};
-
-export const PrimaryFabMedium: Story = {
   render: () => (
-    <Button variant="primary" size="fab-md">
+    <Button iconOnly size="sm" variant="ghost">
       <ExampleIcon />
     </Button>
   ),
 };
 
-export const OutlineFabMedium: Story = {
+export const FabMedium: Story = {
   render: () => (
-    <Button variant="outline" size="fab-md">
+    <Button variant="fab" size="md">
       <ExampleIcon />
     </Button>
   ),
 };
 
-export const GhostFabMedium: Story = {
+export const FabSmall: Story = {
   render: () => (
-    <Button variant="ghost" size="fab-md">
+    <Button variant="fab" size="sm">
       <ExampleIcon />
     </Button>
   ),
 };
 
-export const PrimaryFabSmall: Story = {
+export const QuickButtonMedium: Story = {
   render: () => (
-    <Button variant="primary" size="fab-sm">
+    <Button variant="quick-button" size="md">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
+};
+
+export const QuickButtonSmall: Story = {
+  render: () => (
+    <Button variant="quick-button" size="sm">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
+};
+
+export const PrimaryMediumDisabled: Story = {
+  render: () => (
+    <Button disabled>
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
+};
+
+export const OutlineMediumDisabled: Story = {
+  render: () => (
+    <Button disabled variant="outline">
+      Click me
+    </Button>
+  ),
+};
+
+export const GhostMediumDisabled: Story = {
+  render: () => (
+    <Button disabled variant="ghost">
+      Click me
+    </Button>
+  ),
+};
+
+export const PrimarySmallDisabled: Story = {
+  render: () => (
+    <Button disabled size="sm">
+      Click me
+    </Button>
+  ),
+};
+
+export const OutlineSmallDisabled: Story = {
+  render: () => (
+    <Button disabled variant="outline" size="sm">
+      Click me
+    </Button>
+  ),
+};
+
+export const GhostSmallDisabled: Story = {
+  render: () => (
+    <Button disabled variant="ghost" size="sm">
+      Click m
+    </Button>
+  ),
+};
+
+export const PrimaryIconMediumDisabled: Story = {
+  render: () => (
+    <Button disabled iconOnly size="md">
       <ExampleIcon />
     </Button>
   ),
 };
 
-export const OutlineFabSmall: Story = {
+export const OutlineIconMediumDisabled: Story = {
   render: () => (
-    <Button variant="outline" size="fab-sm">
+    <Button disabled iconOnly size="md" variant="outline">
       <ExampleIcon />
     </Button>
   ),
 };
 
-export const GhostFabSmall: Story = {
+export const GhostIconMediumDisabled: Story = {
   render: () => (
-    <Button variant="ghost" size="fab-sm">
+    <Button disabled iconOnly size="md" variant="ghost">
       <ExampleIcon />
     </Button>
   ),
 };
 
-export const PrimaryDisabled: Story = {
-  args: {
-    disabled: true,
-    children: (
-      <>
-        <ExampleIcon />
-        Atlántida
-      </>
-    ),
-    variant: "primary",
-  },
+export const PrimaryIconSmallDisabled: Story = {
+  render: () => (
+    <Button disabled iconOnly size="sm">
+      <ExampleIcon />
+    </Button>
+  ),
 };
 
-export const OutlineDisabled: Story = {
-  args: {
-    disabled: true,
-    children: "Click me",
-    variant: "outline",
-  },
+export const OutlineIconSmallDisabled: Story = {
+  render: () => (
+    <Button disabled iconOnly size="sm" variant="outline">
+      <ExampleIcon />
+    </Button>
+  ),
 };
 
-export const GhostDisabled: Story = {
-  args: {
-    disabled: true,
-    children: "Click me",
-    variant: "ghost",
-  },
+export const GhostIconSmallDisabled: Story = {
+  render: () => (
+    <Button disabled iconOnly size="sm" variant="ghost">
+      <ExampleIcon />
+    </Button>
+  ),
+};
+
+export const FabMediumDisabled: Story = {
+  render: () => (
+    <Button disabled variant="fab" size="md">
+      <ExampleIcon />
+    </Button>
+  ),
+};
+
+export const FabSmallDisabled: Story = {
+  render: () => (
+    <Button disabled variant="fab" size="sm">
+      <ExampleIcon />
+    </Button>
+  ),
+};
+
+export const QuickButtonMediumDisabled: Story = {
+  render: () => (
+    <Button disabled variant="quick-button" size="md">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
+};
+
+export const QuickButtonSmallDisabled: Story = {
+  render: () => (
+    <Button disabled variant="quick-button" size="sm">
+      <ExampleIcon />
+      Click me
+    </Button>
+  ),
 };

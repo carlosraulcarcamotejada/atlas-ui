@@ -2,7 +2,7 @@
 
 /* Font Nunito */
 @font-face {
-  font-family: "Nunito Sans";
+  font-family: "Nunito-Sans";
   src: url("./assets/fonts/NunitoSans/NunitoSans-Variable.ttf")
     format("truetype");
   font-weight: 400 600 700;
@@ -111,6 +111,11 @@
 
   /* Theme color */
   --color-primary: var(--color-red-600);
+  --color-primary-hover: var(--color-red-500);
+  --color-primary-active: var(--color-red-700);
+  --color-destructive: var(--color-red-600);
+  --color-warning: var(--color-red-600);
+  --color-success: var(--color-red-600);
 
   /* Letter Spacing */
   --tracking-0: 0em; /* 0% */
@@ -156,7 +161,7 @@
 
 @layer base {
   body {
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Nunito-Sans", sans-serif;
   }
 }
 

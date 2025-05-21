@@ -89,8 +89,8 @@ function AlertClose() {
     <Button
       onClick={onClose}
       className="text-current hover:text-current/80 active:text-current absolute top-1/2 -translate-y-1/2 right-03"
-      variant="tertiary"
-      size="icon-sm"
+      variant="ghost"
+      size="sm"
     >
       <XIcon />
     </Button>

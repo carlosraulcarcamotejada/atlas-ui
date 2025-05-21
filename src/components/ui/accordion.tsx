@@ -14,7 +14,7 @@ const accordionTriggerVariants = cva(
   justify-start
   outline-none 
   pb-04
-  rounded-02
+  rounded-01
   text-gray-900
   transition
   w-full
@@ -22,9 +22,9 @@ const accordionTriggerVariants = cva(
   active:bg-gray-200
   disabled:opacity-50
   disabled:pointer-events-none
-  focus-visible:border-ring 
+  focus-visible:border-red-600 
   focus-visible:ring-[3px] 
-  focus-visible:ring-ring/50
+  focus-visible:ring-gray-400
   hover:bg-gray-100
   hover:cursor-pointer
   [&_svg]:duration-200 

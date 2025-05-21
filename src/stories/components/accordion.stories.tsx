@@ -81,14 +81,15 @@ export const AccordionMediumWithoutDivider: Story = {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger>Is it animated?</AccordionTrigger>
+        <AccordionTrigger>Imágen de Dakota Tyler</AccordionTrigger>
         <AccordionContent>
-          Para activar el servicio de Atlántida Online deberás descargar nuestra
-          aplicación Atlántida Móvil y presionar el botón de "Activa tu Banca
-          Digital" para poder crear tu usuario y/o una nueva cuenta con los
-          accesos correspondientes. Al finalizar el proceso obtendrás tu usuario
-          y contraseña. Así mismo, también tienes al opción de solicitar los
-          accesos en cualquiera de nuestras agencias a nivel nacional.
+          <div className="rounded-03 overflow-hidden border border-gray-300 inline-block">
+            <img
+              className="w-full h-auto block"
+              src="https://pbs.twimg.com/media/FrEx8qZaEAEEPCT.jpg:large"
+              alt="dakota-tyler-image"
+            />
+          </div>
         </AccordionContent>
       </AccordionItem>
     </Accordion>
