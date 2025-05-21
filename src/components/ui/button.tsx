@@ -4,7 +4,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
-import { textVariants } from "./text";
+import { textVariants } from "@/components/ui/text";
 
 const buttonVariants = cva(
   `
@@ -33,7 +33,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-primary rounded-02 text-white  hover:bg-red-500     active:bg-red-700 disabled:bg-gray-200 disabled:text-gray-500",
+          "bg-primary rounded-02 text-white  hover:bg-red-500    active:bg-red-700 disabled:bg-gray-200 disabled:text-gray-500",
         outline:
           "bg-white rounded-02 text-primary hover:text-red-500 active:text-red-700  border-2 border-primary hover:border-red-500 active:border-red-700 disabled:border-gray-500 disabled:text-gray-500",
         ghost:
@@ -41,105 +41,50 @@ const buttonVariants = cva(
         fab: "bg-primary text-white  hover:bg-red-500 active:bg-red-700 disabled:bg-gray-200 disabled:text-gray-500 rounded-full",
         "quick-button":
           "bg-white shadow-01 rounded-02 flex flex-col !pt-03 !pb-04 text-primary hover:shadow-02 active:text-white active:bg-primary active:shadow-none disabled:bg-gray-200 disabled:text-gray-500 disabled:shadow-none",
-        link: "",
-        blur: "",
       },
       size: {
-        sm: "h-06 min-w-[76px] px-04 py-02 gap-x-01 !text-02",
-        md: "h-08 min-w-[192px] px-06 py-03 gap-x-02 !text-03",
-        lg: "",
+        sm: "",
+        md: "",
         auto: "",
       },
       iconOnly: {
         true: "",
         false: "",
       },
-      block: {
+      fullWidth: {
         true: "",
         false: "",
       },
     },
     compoundVariants: [
       {
-        variant: "primary",
-        size: "lg",
-        iconOnly: false,
-        class: "h-09 min-w-[256px] px-08 py-04 gap-x-03 !text-04",
+        variant: ["primary", "outline", "ghost"],
+        size: "sm",
+        class: "h-06 px-04 py-02 gap-x-01 !text-02",
       },
       {
-        variant: "outline",
-        size: "lg",
-        iconOnly: false,
-        class: "h-09 min-w-[256px] px-08 py-04 gap-x-03 !text-04",
+        variant: ["primary", "outline", "ghost"],
+        size: "md",
+        class: "h-08 px-06 py-03 gap-x-02 !text-03",
       },
       {
-        variant: "ghost",
-        size: "lg",
+        variant: ["primary", "outline", "ghost"],
+        size: "sm",
         iconOnly: false,
-        class: "h-09 min-w-[256px] px-08 py-04 gap-x-03 !text-04",
+        fullWidth: false,
+        class: "min-w-[76px]",
+      },
+      {
+        variant: ["primary", "outline", "ghost"],
+        size: "md",
+        iconOnly: false,
+        fullWidth: false,
+        class: "min-w-[192px]",
       },
 
       {
-        variant: "primary",
-        size: "lg",
-        block: true,
-        iconOnly: false,
-        class: "!w-full",
-      },
-      {
-        variant: "outline",
-        size: "lg",
-        block: true,
-        iconOnly: false,
-        class: "!w-full",
-      },
-      {
-        variant: "ghost",
-        size: "lg",
-        block: true,
-        iconOnly: false,
-        class: "!w-full",
-      },
-
-      {
-        variant: "primary",
-        size: "md",
-        block: true,
-        iconOnly: false,
-        class: "!w-full",
-      },
-      {
-        variant: "outline",
-        size: "md",
-        block: true,
-        iconOnly: false,
-        class: "!w-full",
-      },
-      {
-        variant: "ghost",
-        size: "md",
-        block: true,
-        iconOnly: false,
-        class: "!w-full",
-      },
-      {
-        variant: "primary",
-        size: "sm",
-        block: true,
-        iconOnly: false,
-        class: "!w-full",
-      },
-      {
-        variant: "outline",
-        size: "sm",
-        block: true,
-        iconOnly: false,
-        class: "!w-full",
-      },
-      {
-        variant: "ghost",
-        size: "sm",
-        block: true,
+        variant: ["primary", "outline", "ghost"],
+        fullWidth: true,
         iconOnly: false,
         class: "!w-full",
       },
@@ -178,44 +123,18 @@ const buttonVariants = cva(
         size: "md",
         class: "px-0 py-0 min-w-0 size-07",
       },
+
       {
-        variant: "primary",
-        block: false,
+        variant: ["primary", "outline", "ghost"],
+        fullWidth: false,
         iconOnly: true,
         size: "sm",
         class: "min-w-06 p-01",
       },
+
       {
-        variant: "outline",
-        block: false,
-        iconOnly: true,
-        size: "sm",
-        class: "min-w-06 p-01",
-      },
-      {
-        variant: "ghost",
-        block: false,
-        iconOnly: true,
-        size: "sm",
-        class: "min-w-06 p-01",
-      },
-      {
-        variant: "primary",
-        block: false,
-        iconOnly: true,
-        size: "md",
-        class: "min-w-08 p-04",
-      },
-      {
-        variant: "outline",
-        block: false,
-        iconOnly: true,
-        size: "md",
-        class: "min-w-08 p-04",
-      },
-      {
-        variant: "ghost",
-        block: false,
+        variant: ["primary", "outline", "ghost"],
+        fullWidth: false,
         iconOnly: true,
         size: "md",
         class: "min-w-08 p-04",
@@ -225,14 +144,14 @@ const buttonVariants = cva(
       iconOnly: false,
       variant: "primary",
       size: "md",
-      block: false,
+      fullWidth: false,
     },
   }
 );
 
 function Button({
   asChild = false,
-  block = false,
+  fullWidth = false,
   className,
   iconOnly = false,
   size,
@@ -250,7 +169,7 @@ function Button({
       data-variant={variant}
       data-size={size}
       className={cn(
-        buttonVariants({ block, className, iconOnly, size, variant })
+        buttonVariants({ fullWidth, className, iconOnly, size, variant })
       )}
       {...props}
     />

@@ -13,7 +13,7 @@ type Story = StoryObj<typeof Button>;
 
 export const PrimaryMedium: Story = {
   render: () => (
-    <Button >
+    <Button>
       Atlántida
       <ExampleIcon />
     </Button>
@@ -40,7 +40,7 @@ export const GhostMedium: Story = {
 
 export const PrimaryMediumBlock: Story = {
   render: () => (
-    <Button block>
+    <Button fullWidth>
       <ExampleIcon />
       Atlántida
     </Button>
@@ -49,7 +49,7 @@ export const PrimaryMediumBlock: Story = {
 
 export const OutlineMediumBlock: Story = {
   render: () => (
-    <Button block variant="outline">
+    <Button fullWidth variant="outline">
       <ExampleIcon />
       Click me
     </Button>
@@ -58,7 +58,7 @@ export const OutlineMediumBlock: Story = {
 
 export const GhostMediumBlock: Story = {
   render: () => (
-    <Button block variant="ghost">
+    <Button fullWidth variant="ghost">
       <ExampleIcon />
       Click me
     </Button>
@@ -92,36 +92,9 @@ export const GhostSmall: Story = {
   ),
 };
 
-export const PrimaryLarge: Story = {
-  render: () => (
-    <Button size="lg">
-      <ExampleIcon />
-      Atlántida
-    </Button>
-  ),
-};
-
-export const OutlineLarge: Story = {
-  render: () => (
-    <Button variant="outline" size="lg">
-      <ExampleIcon />
-      Click me
-    </Button>
-  ),
-};
-
-export const GhostLarge: Story = {
-  render: () => (
-    <Button variant="ghost" size="lg">
-      <ExampleIcon />
-      Click me
-    </Button>
-  ),
-};
-
 export const PrimarySmallBlock: Story = {
   render: () => (
-    <Button block size="sm">
+    <Button fullWidth size="sm">
       <ExampleIcon />
       Click me
     </Button>
@@ -130,7 +103,7 @@ export const PrimarySmallBlock: Story = {
 
 export const OutlineSmallBlock: Story = {
   render: () => (
-    <Button block variant="outline" size="sm">
+    <Button fullWidth variant="outline" size="sm">
       <ExampleIcon />
       Click me
     </Button>
@@ -139,7 +112,7 @@ export const OutlineSmallBlock: Story = {
 
 export const GhostSmallBlock: Story = {
   render: () => (
-    <Button block variant="ghost" size="sm">
+    <Button fullWidth variant="ghost" size="sm">
       <ExampleIcon />
       Click me
     </Button>
