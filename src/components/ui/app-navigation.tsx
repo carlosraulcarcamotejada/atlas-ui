@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { Slot } from "@radix-ui/react-slot";
+import { typographyVariants } from "./typography";
 
 interface NavigationContextValue {
   activePath: string;
@@ -42,38 +42,30 @@ function AppNavigation({
   );
 }
 
-interface AppNavigationItemProps {
-  href: string;
-  icon: React.ReactNode;
-  label: string;
-  asChild?: boolean;
-  children?: React.ReactNode;
-}
-
 function AppNavigationItem({
-  asChild = false,
   className,
-  href,
   icon: Icon,
   label,
+  path,
   ...props
-}: AppNavigationItemProps &
-  Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">) {
+}: React.ComponentProps<"div"> & {
+  asChild?: boolean;
+  icon: React.ReactNode;
+  label: string;
+  path?: string;
+}) {
   const context = React.useContext(NavigationContext);
   if (!context) {
     throw new Error("AppNavigation.Item must be used within AppNavigation");
   }
   const { activePath } = context;
-  const isActive = activePath === href;
-
-  const Component = asChild ? Slot : "a";
+  const isActive = activePath === path;
 
   return (
-    <Component
+    <div
       {...props}
-      {...(!asChild && { href })}
       className={cn(
-        "flex flex-1 flex-col items-center gap-y-01 text-01@",
+        "flex flex-1 flex-col items-center gap-y-01",
         isActive && "text-primary font-bold",
         !isActive && "text-gray-500",
         className
@@ -87,8 +79,15 @@ function AppNavigationItem({
       >
         {Icon}
       </div>
-      <span className="text-01">{label}</span>
-    </Component>
+      <span
+        className={typographyVariants({
+          variant: "body-xs",
+          weight: "regular",
+        })}
+      >
+        {label}
+      </span>
+    </div>
   );
 }
 

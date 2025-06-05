@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Text, textVariants } from "@/components/ui/text";
+import { Typography, typographyVariants } from "@/components/ui/typography";
 
-const meta: Meta<typeof Text> = {
-  title: "Components/Text",
-  component: Text,
+const meta: Meta<typeof Typography> = {
+  title: "Components/Typography",
+  component: Typography,
   tags: ["autodocs"],
 };
 export default meta;
@@ -12,14 +12,16 @@ type Story = StoryObj<typeof Text>;
 
 export const Primary: Story = {
   render: () => (
-    <Text variant="display-l" weight="bold">
+    <Typography variant="display-l" weight="bold">
       Atlántida
-    </Text>
-  )
+    </Typography>
+  ),
 };
 
 export const TestingTextStyle: Story = {
   render: () => (
-    <span className={textVariants({ variant: "display-l" })}>Atlántida</span>
+    <span className={typographyVariants({ variant: "display-l" })}>
+      Atlántida
+    </span>
   ),
 };

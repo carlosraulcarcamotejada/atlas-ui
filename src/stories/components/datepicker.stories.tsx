@@ -10,6 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 import { CalendarIcon } from "@/components/icons/user-interface/calendar-icon";
 import { Calendar } from "@/components/ui/calendar";
+import { es } from "date-fns/locale";
 
 const meta: Meta<typeof Popover> = {
   title: "Components/Datepicker",
@@ -37,8 +38,9 @@ export const PrimaryMedium: Story = {
             {date ? format(date, "PPP") : <span>Pick a date</span>}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-auto p-0" align="start">
+        <PopoverContent >
           <Calendar
+            locale={es}
             mode="single"
             selected={date}
             onSelect={setDate}

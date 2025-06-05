@@ -3,7 +3,7 @@ import * as React from "react";
 import { DayPicker } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { ChevronLeftIcon } from "@/components/icons/arrows/chevron-left-icon";
 import { ChevronRightIcon } from "@/components/icons/arrows/chevron-right-icon";
 
@@ -16,24 +16,21 @@ function Calendar({
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
-      className={cn("p-3", className)}
+      className={cn("bg-white rounded-02 w-full m-04", className)}
       classNames={{
-        months: "flex flex-col sm:flex-row gap-2",
-        month: "flex flex-col gap-4",
-        caption: "flex justify-center pt-1 relative items-center w-full",
+        months: "flex flex-col sm:flex-row gap-02",
+        month: "flex flex-col gap-04",
+        caption: "flex justify-center pt-01@ relative items-center w-full",
         caption_label: "text-sm font-medium",
-        nav: "flex items-center gap-1",
-        nav_button: cn(
-          buttonVariants({ variant: "outline" }),
-          "size-7 bg-transparent p-0 opacity-50 hover:opacity-100"
-        ),
-        nav_button_previous: "absolute left-1",
-        nav_button_next: "absolute right-1",
-        table: "w-full border-collapse space-x-1",
+        nav: "flex items-center gap-01@",
+        nav_button: "",
+        nav_button_previous: "",
+        nav_button_next: "",
+        table: "w-full",
         head_row: "flex",
         head_cell:
-          "text-muted-foreground rounded-md w-8 font-normal text-[0.8rem]",
-        row: "flex w-full mt-2",
+          "text-gray-900  rounded-01 w-full font-normal text-[0.8rem]",
+        row: "flex w-full mt-02",
         cell: cn(
           "relative p-0 text-center text-sm focus-within:relative focus-within:z-20 [&:has([aria-selected])]:bg-accent [&:has([aria-selected].day-range-end)]:rounded-r-md",
           props.mode === "range"
@@ -41,15 +38,15 @@ function Calendar({
             : "[&:has([aria-selected])]:rounded-md"
         ),
         day: cn(
-          buttonVariants({ variant: "ghost" }),
-          "size-8 p-0 font-normal aria-selected:opacity-100"
+          buttonVariants({ variant: "ghost", size: "sm", iconOnly: true }),
+          "text-gray-800"
         ),
         day_range_start:
           "day-range-start aria-selected:bg-primary aria-selected:text-primary-foreground",
         day_range_end:
           "day-range-end aria-selected:bg-primary aria-selected:text-primary-foreground",
         day_selected:
-          "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
+          "bg-green-700 text-white focus:bg-primary hover:text-white",
         day_today: "bg-accent text-accent-foreground",
         day_outside:
           "day-outside text-muted-foreground aria-selected:text-muted-foreground",
@@ -60,11 +57,27 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        IconLeft: ({ className, ...props }) => (
-          <ChevronLeftIcon className={cn("size-4", className)} {...props} />
+        IconLeft: ({ ...props }) => (
+          <Button
+            variant="ghost"
+            size="sm"
+            iconOnly
+            {...props}
+            className="absolute top-0 left-0"
+          >
+            <ChevronLeftIcon />
+          </Button>
         ),
-        IconRight: ({ className, ...props }) => (
-          <ChevronRightIcon className={cn("size-4", className)} {...props} />
+        IconRight: ({ ...props }) => (
+          <Button
+            variant="ghost"
+            size="sm"
+            iconOnly
+            {...props}
+            className="absolute top-0 right-0"
+          >
+            <ChevronRightIcon />
+          </Button>
         ),
       }}
       {...props}

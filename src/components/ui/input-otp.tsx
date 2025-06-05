@@ -1,8 +1,9 @@
-'use client'
+"use client";
 import * as React from "react";
 import { OTPInput, OTPInputContext } from "input-otp";
 
 import { cn } from "@/lib/utils";
+import { typographyVariants } from "./typography";
 
 function InputOTP({
   className,
@@ -59,7 +60,6 @@ function InputOTPSlot({
        outline-none 
        relative 
        rounded-02
-       text-03
        transition-all
        w-07
 
@@ -73,6 +73,12 @@ function InputOTPSlot({
        data-[active=true]:ring-[3px]#
        data-[active=true]:ring-gray-700/50#
        data-[active=true]:z-10
+
+       ${typographyVariants({
+         variant: "heading-xs",
+         weight: "regular",
+         color: "gray-800",
+       })}
        `,
 
         className

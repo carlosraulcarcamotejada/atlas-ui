@@ -55,6 +55,10 @@ export const BadgeSmallWord: Story = {
   ),
 };
 
-export const BadgeWithoutChild: Story = {
+export const BadgeMediumWithoutChild: Story = {
   render: () => <Badge content={5} />,
+};
+
+export const BadgeSmallWithoutChild: Story = {
+  render: () => <Badge content={5} size="sm" />,
 };

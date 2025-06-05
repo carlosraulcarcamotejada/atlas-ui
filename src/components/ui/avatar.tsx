@@ -3,20 +3,41 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar";
 
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
+import { typographyVariants } from "./typography";
 
 const avatarVariants = cva(
-  "relative flex shrink-0 overflow-hidden rounded-full font-bold text-gray-700",
+  "relative flex shrink-0 overflow-hidden rounded-full",
   {
     variants: {
       size: {
-        sm: "size-07 !text-01",
-        md: "size-09 !text-03",
+        sm: `size-07 ${typographyVariants({
+          variant: "body-xs",
+          weight: "bold",
+          color: "gray-700",
+        })}`,
+        md: `size-09 ${typographyVariants({
+          variant: "body-l",
+          weight: "bold",
+          color: "gray-700",
+        })}`,
       },
       status: {
-        default: "",
-        online: "ring-4 ring-green-300 shadow-success",
+        default: "shadow-01",
+        online: "border-green-300 shadow-success",
       },
     },
+    compoundVariants: [
+      {
+        size: "sm",
+        status: "online",
+        class: "border-2",
+      },
+      {
+        size: "md",
+        status: "online",
+        class: "border-4",
+      },
+    ],
     defaultVariants: {
       status: "default",
       size: "md",

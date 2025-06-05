@@ -4,28 +4,25 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { ChevronDownIcon } from "@/components/icons/arrows/chevron-down-icon";
+import { typographyVariants } from "./typography";
 
 const accordionTriggerVariants = cva(
   `
-  flex 
-  font-bold
+  flex
   gap-x-02 
   items-center 
   justify-start
   outline-none 
   pb-04
   rounded-01
-  text-gray-900
   transition
   w-full
 
-  active:bg-gray-200
   disabled:opacity-50
   disabled:pointer-events-none
   focus-visible:border-red-600 
   focus-visible:ring-[3px] 
   focus-visible:ring-gray-400
-  hover:bg-gray-100
   hover:cursor-pointer
   [&_svg]:duration-200 
   [&_svg]:pointer-events-none 
@@ -40,8 +37,16 @@ const accordionTriggerVariants = cva(
   {
     variants: {
       size: {
-        sm: "!pt-04 !text-03",
-        md: "!pt-05 !text-04",
+        sm: `!pt-04 ${typographyVariants({
+          variant: "body-m",
+          weight: "bold",
+          color: "gray-900",
+        })}`,
+        md: `!pt-05 ${typographyVariants({
+          variant: "heading-xs",
+          weight: "bold",
+          color: "gray-900",
+        })}`,
       },
     },
     defaultVariants: {
@@ -52,12 +57,12 @@ const accordionTriggerVariants = cva(
 
 type AccordionSize = VariantProps<typeof accordionTriggerVariants>["size"];
 
-interface AccordionContext {
+interface AccordionContextProps {
   showDivider?: boolean;
   size?: AccordionSize;
 }
 
-const AccordionContext = React.createContext<AccordionContext>({
+const AccordionContext = React.createContext<AccordionContextProps>({
   showDivider: true,
   size: "md",
 });
@@ -77,8 +82,8 @@ const accordionItemVariants = cva("", {
 const accordionContentVariants = cva("pt-0 pb-04 text-gray-700 font-regular", {
   variants: {
     size: {
-      sm: "!text-02",
-      md: "!text-03",
+      sm: `!text-02`,
+      md: `!text-03`,
     },
   },
   defaultVariants: {
@@ -91,7 +96,8 @@ function Accordion({
   showDivider,
   size,
   ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Root> & AccordionContext) {
+}: React.ComponentProps<typeof AccordionPrimitive.Root> &
+  AccordionContextProps) {
   return (
     <AccordionContext.Provider value={{ size, showDivider }}>
       <AccordionPrimitive.Root
@@ -108,7 +114,7 @@ function AccordionItem({
   ...props
 }: React.ComponentProps<typeof AccordionPrimitive.Item>) {
   const context = React.useContext(AccordionContext);
-  if (!context) throw new Error("Accordion.Item must be used whitin Accordion");
+  if (!context) throw new Error("AccordionItem must be used whitin Accordion");
 
   const { showDivider } = context;
 
@@ -129,7 +135,7 @@ function AccordionTrigger({
   const context = React.useContext(AccordionContext);
 
   if (!context)
-    throw new Error("Accordion.Trigger must be used whitin Accordion");
+    throw new Error("AccordionTrigger must be used whitin Accordion");
 
   const { size } = context;
 
@@ -155,7 +161,7 @@ function AccordionContent({
   const context = React.useContext(AccordionContext);
 
   if (!context)
-    throw new Error("Accordion.Content must be used whitin Accordion");
+    throw new Error("AccordionContent must be used whitin Accordion");
 
   const { size } = context;
 

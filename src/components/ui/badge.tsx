@@ -1,26 +1,32 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
+import { typographyVariants } from "./typography";
 
 const badgeChildVariants = cva(
   `
   -translate-y-1/2
   absolute 
   bg-primary 
-  flex 
-  font-bold
+  flex
   items-center
   justify-center
   rounded-full
-  text-white 
   translate-x-1/2 
   z-50
   `,
   {
     variants: {
       size: {
-        sm: "!text-01 h-04 min-w-04 p-01 top-02 right-02",
-        md: "!text-02 h-05 min-w-05 py-[2.5px] px-[7.5px] top-02 right-01",
+        sm: `h-04 min-w-04 p-01 top-02 right-02 ${typographyVariants({
+          variant: "body-xs",
+          weight: "bold",
+          color: "white",
+        })}`,
+        md: `h-05 min-w-05 py-[2.5px] px-[7.5px] top-02 right-01 ${typographyVariants(
+          { variant: "body-s", weight: "bold", color: "white" }
+        )}`,
+        auto: "",
       },
     },
     defaultVariants: {

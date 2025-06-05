@@ -18,33 +18,25 @@ type Story = StoryObj<typeof AppNavigation>;
 
 export const SelectedFirsOption: Story = {
   render: () => (
-    <AppNavigation>
-      <AppNavigationItem href="/" icon={<HomeIcon />} label="Inicio" />
-      <AppNavigationItem
-        href="/search"
-        icon={<MagnifyingGlassIcon />}
-        label="Buscar"
-      />
-      <AppNavigationItem
-        href="/settings"
-        icon={<SettingsIcon />}
-        label="Setting"
-      />
+    <AppNavigation activePath="/">
+      <AppNavigationItem icon={<HomeIcon />} label="Inicio" />
+      <AppNavigationItem icon={<MagnifyingGlassIcon />} label="Buscar" />
+      <AppNavigationItem icon={<SettingsIcon />} label="Setting" />
     </AppNavigation>
   ),
 };
 
 export const SelectedSecondOption: Story = {
   render: () => (
-    <AppNavigation activePath="/search">
-      <AppNavigationItem href="/" icon={<HomeIcon />} label="Inicio" />
+    <AppNavigation activePath="search">
+      <AppNavigationItem path="/" icon={<HomeIcon />} label="Inicio" />
       <AppNavigationItem
-        href="/search"
+        path="search"
         icon={<MagnifyingGlassIcon />}
         label="Buscar"
       />
       <AppNavigationItem
-        href="/settings"
+        path="settings"
         icon={<SettingsIcon />}
         label="Setting"
       />
@@ -54,15 +46,15 @@ export const SelectedSecondOption: Story = {
 
 export const SelectedThirdOption: Story = {
   render: () => (
-    <AppNavigation activePath="/settings">
-      <AppNavigationItem href="/" icon={<HomeIcon />} label="Inicio" />
+    <AppNavigation activePath="settings">
+      <AppNavigationItem path="/" icon={<HomeIcon />} label="Inicio" />
       <AppNavigationItem
-        href="/search"
+        path="search"
         icon={<MagnifyingGlassIcon />}
         label="Buscar"
       />
       <AppNavigationItem
-        href="/settings"
+        path="settings"
         icon={<SettingsIcon />}
         label="Setting"
       />

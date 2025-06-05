@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import { Slot } from "@radix-ui/react-slot";
 
-const textVariants = cva("w-full", {
+const typographyVariants = cva("", {
   variants: {
     variant: {
       "display-l": "text-09 -tracking-03 leading-auto",
@@ -26,6 +26,7 @@ const textVariants = cva("w-full", {
     },
     color: {
       "gray-900": "!text-gray-900",
+      "gray-800": "!text-gray-800",
       "gray-700": "!text-gray-700",
       "gray-500": "!text-gray-500",
       "gray-300": "!text-gray-300",
@@ -33,7 +34,7 @@ const textVariants = cva("w-full", {
       "red-600": "!text-red-600",
       "red-500": "!text-red-500",
       white: "!text-white",
-      "primary": "text-primary",
+      primary: "text-primary",
     },
     weight: {
       regular: "font-regular",
@@ -53,9 +54,9 @@ const textVariants = cva("w-full", {
   },
 });
 
-type TextType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "div";
+type TextType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p";
 
-function Text({
+function Typography({
   as = "h1",
   asChild = false,
   className,
@@ -66,7 +67,7 @@ function Text({
   weight,
   ...props
 }: React.ComponentProps<TextType> &
-  VariantProps<typeof textVariants> & {
+  VariantProps<typeof typographyVariants> & {
     asChild?: boolean;
   } & { as?: TextType }) {
   const Comp = asChild ? Slot : as;
@@ -76,11 +77,18 @@ function Text({
       data-slot="text"
       role="text"
       className={cn(
-        textVariants({ className, color, italic, underline, variant, weight })
+        typographyVariants({
+          className,
+          color,
+          italic,
+          underline,
+          variant,
+          weight,
+        })
       )}
       {...props}
     />
   );
 }
 
-export { Text, textVariants };
+export { Typography, typographyVariants };
