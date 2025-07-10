@@ -1,8 +1,8 @@
-import * as React from "react"
-import * as LabelPrimitive from "@radix-ui/react-label"
+import * as React from "react";
+import * as LabelPrimitive from "@radix-ui/react-label";
 
-import { cn } from "@/lib/utils"
-import { textVariants } from "./typography"
+import { cn } from "@/lib/utils";
+import { typographyVariants } from "./typography";
 
 function Label({
   className,
@@ -22,12 +22,12 @@ function Label({
         peer-disabled:opacity-50
         select-none 
         `,
-        textVariants({variant:"body-m"}),
+        typographyVariants({ variant: "body-m" }),
         className
       )}
       {...props}
     />
-  )
+  );
 }
 
-export { Label }
+export { Label };
