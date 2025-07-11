@@ -13,7 +13,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { es } from "date-fns/locale";
 
 const meta: Meta<typeof Popover> = {
-  title: "Components/Datepicker",
+  title: "Components/UI/Datepicker",
   component: Popover,
   tags: ["autodocs"],
 };

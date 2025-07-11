@@ -7,8 +7,8 @@ import { MagnifyingGlassIcon } from "@/components/icons/user-interface/magnifyin
 import { HomeIcon } from "@/components/icons/user-interface/home-icon";
 import { SettingsIcon } from "@/components/icons/user-interface/settings-icon";
 
-const meta: Meta<typeof Text> = {
-  title: "Components/AppNavigation",
+const meta: Meta<typeof AppNavigation> = {
+  title: "Components/UI/AppNavigation",
   component: AppNavigation,
   tags: ["autodocs"],
 };

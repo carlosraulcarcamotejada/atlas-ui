@@ -1,10 +1,9 @@
 import { Checkbox } from "@/components/ui/checkbox";
-import { GridContainer } from "@/components/ui/grid-container";
 import { Label } from "@/components/ui/label";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof GridContainer> = {
-  title: "Components/Checkbox",
+const meta: Meta<typeof Checkbox> = {
+  title: "Components/UI/Checkbox",
   component: Checkbox,
   tags: ["autodocs"],
 };

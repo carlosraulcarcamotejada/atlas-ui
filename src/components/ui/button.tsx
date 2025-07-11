@@ -37,7 +37,7 @@ const buttonVariants = cva(
         outline:
           "bg-white rounded-02 text-primary hover:text-red-500 active:text-red-700  border-2 border-primary hover:border-red-500 active:border-red-700 disabled:border-gray-500 disabled:text-gray-500",
         ghost:
-          "bg-white rounded-02 text-primary  hover:text-red-500   active:text-red-700 disabled:text-gray-500",
+          "bg-transparent rounded-02 text-primary  hover:text-red-500   active:text-red-700 disabled:text-gray-500",
         fab: "bg-primary text-white  hover:bg-red-500 active:bg-red-700 disabled:bg-gray-200 disabled:text-gray-500 rounded-full",
         "quick-button":
           "bg-white shadow-01 rounded-02 flex flex-col !pt-03 !pb-04 text-primary hover:shadow-02 active:text-white active:bg-primary active:shadow-none disabled:bg-gray-200 disabled:text-gray-500 disabled:shadow-none",

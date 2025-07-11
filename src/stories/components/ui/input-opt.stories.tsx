@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/input-otp";
 
 const meta: Meta<typeof InputOTP> = {
-  title: "Components/InputOpt",
+  title: "Components/UI/InputOpt",
   component: InputOTP,
   tags: ["autodocs"],
 };

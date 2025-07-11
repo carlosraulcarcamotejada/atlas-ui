@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const meta: Meta<typeof Badge> = {
-  title: "Components/Badge",
+  title: "Components/UI/Badge",
   component: Badge,
   tags: ["autodocs"],
 };

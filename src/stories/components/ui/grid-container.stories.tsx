@@ -2,7 +2,7 @@ import { GridContainer } from "@/components/ui/grid-container";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof GridContainer> = {
-  title: "Components/GridContainer",
+  title: "Components/UI/GridContainer",
   component: GridContainer,
   tags: ["autodocs"],
 };

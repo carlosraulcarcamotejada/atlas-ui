@@ -8,7 +8,7 @@ import {
 import { ExampleIcon } from "@/components/icons/example-icon";
 
 const meta: Meta<typeof Alert> = {
-  title: "Components/Alert",
+  title: "Components/UI/Alert",
   component: Alert,
   tags: ["autodocs"],
 };

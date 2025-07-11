@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Typography, typographyVariants } from "@/components/ui/typography";
 
 const meta: Meta<typeof Typography> = {
-  title: "Components/Typography",
+  title: "Components/UI/Typography",
   component: Typography,
   tags: ["autodocs"],
 };
@@ -10,9 +10,9 @@ export default meta;
 
 type Story = StoryObj<typeof Text>;
 
-export const Primary: Story = {
+export const DisplayLBold: Story = {
   render: () => (
-    <Typography variant="display-l" weight="bold">
+    <Typography as="h1" variant="display-l" weight="bold">
       Atlántida
     </Typography>
   ),
