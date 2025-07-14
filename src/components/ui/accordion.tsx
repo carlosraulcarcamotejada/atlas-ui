@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { cva, VariantProps } from "class-variance-authority";
+import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { ChevronDownIcon } from "@/components/icons/arrows/chevron-down-icon";
 import { typographyVariants } from "./typography";

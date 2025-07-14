@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
+import dts from "vite-plugin-dts";
 
 // https://vite.dev/config/
 import { fileURLToPath } from "node:url";
@@ -14,10 +15,34 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    dts({
+      rollupTypes: true,
+      tsconfigPath: path.resolve(__dirname, "tsconfig.app.json"),
+    }),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  build: {
+    lib: {
+      entry: path.resolve(__dirname, "./src/components/index.ts"),
+      name: "React-Atlas-UI",
+      fileName: "react-atlas-ui",
+    },
+    outDir: "dist",
+    rollupOptions: {
+      external: ["react", "react-dom"],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+        },
+      },
     },
   },
   test: {
